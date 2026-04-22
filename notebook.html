@@ -85,13 +85,13 @@
             background-color: #ff2222;
         }
 
-        .main-content {
+        .content {
             margin-left: 250px;
             flex: 1;
             padding: 30px;
         }
 
-        .main-content h1 {
+        .content h1 {
             color: #2c3e50;
             margin-bottom: 30px;
             font-size: 2rem;
@@ -103,7 +103,7 @@
             gap: 20px;
         }
 
-        .notebook-card {
+        .card {
             background: white;
             border-radius: 8px;
             padding: 20px;
@@ -112,7 +112,7 @@
             transition: transform 0.2s ease;
         }
 
-        .notebook-card:hover {
+        .card:hover {
             transform: scale(1.1);
         }
 
@@ -161,46 +161,46 @@
         </ul>
     </div>
 
-    <div class="main-content">
+    <div class="content">
         <h1>Aura Farm Academy</h1>
 
         <div class="cards-grid">
-            <div class="notebook-card" style="border-top-color: var(--orange);">
+            <div class="card" style="border-top-color: var(--orange);">
                 <div class="card-title">Filipino</div>
                 <div class="card-teacher">Ms. Jemima Francisco</div>
                 <div class="progress-bar"><div class="progress-fill" style="background-color: var(--orange); width: 70%;"></div></div>
                 <div class="card-date">Last updated 2025-2026</div>
             </div>
 
-            <div class="notebook-card" style="border-top-color: var(--red);">
+            <div class="card" style="border-top-color: var(--red);">
                 <div class="card-title">English</div>
                 <div class="card-teacher">Ms. Kristin Avila</div>
                 <div class="progress-bar"><div class="progress-fill" style="background-color: var(--red); width: 65%;"></div></div>
                 <div class="card-date">Last updated 2025-2026</div>
             </div>
 
-            <div class="notebook-card" style="border-top-color: var(--blue);">
+            <div class="card" style="border-top-color: var(--blue);">
                 <div class="card-title">Math</div>
                 <div class="card-teacher">Mr. Jill Ramos</div>
                 <div class="progress-bar"><div class="progress-fill" style="background-color: var(--blue); width: 80%;"></div></div>
                 <div class="card-date">Last updated 2025-2026</div>
             </div>
 
-            <div class="notebook-card" style="border-top-color: var(--green);">
+            <div class="card" style="border-top-color: var(--green);">
                 <div class="card-title">Science</div>
                 <div class="card-teacher">Ms. Jillian Talavera</div>
                 <div class="progress-bar"><div class="progress-fill" style="background-color: var(--green); width: 75%;"></div></div>
                 <div class="card-date">Last updated 2025-2026</div>
             </div>
 
-            <div class="notebook-card" style="border-top-color: var(--yellow);">
+            <div class="card" style="border-top-color: var(--yellow);">
                 <div class="card-title">Social Studies</div>
                 <div class="card-teacher">Mr. Prinz Reynoso</div>
                 <div class="progress-bar"><div class="progress-fill" style="background-color: var(--yellow); width: 60%;"></div></div>
                 <div class="card-date">Last updated 2025-2026</div>
             </div>
 
-            <div class="notebook-card" style="border-top-color: var(--lightblue);">
+            <div class="card" style="border-top-color: var(--lightblue);">
                 <div class="card-title">Values Education</div>
                 <div class="card-teacher">Mr. Bernard Buntile</div>
                 <div class="progress-bar"><div class="progress-fill" style="background-color: var(--lightblue); width: 85%;"></div></div>
@@ -211,9 +211,15 @@
 
     <script>
         function logout() {
-            if (confirm("Exit now?")) {
-                window.location.href = "index.html";
+            let confirmLogout = confirm("Exit now?"); //confirm() has 2 options : ok (True) and cancel(False)
+            
+            if (confirmLogout) { //if ok or True
+                window.location.href = "index.html"; //load page
             }
+        } 
+
+        function message(){
+            alert("Not available at this time.");
         }
     </script>
 </body>
