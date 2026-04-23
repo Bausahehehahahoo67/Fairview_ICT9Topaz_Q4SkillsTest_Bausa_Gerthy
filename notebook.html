@@ -28,7 +28,7 @@
             <div class="list-group-item">Notebooks</div>
             <div class="list-group-item">Profile</div>
             <div class="list-group-item">Calendar</div>
-            <div class="list-group-item">Logout</div>
+            <div class="list-group-item" style="cursor: pointer;" onclick="logout()">Logout</div>
         </div>
     </div>
 
@@ -81,5 +81,19 @@
         </div>
     </div>
 </div>
+
+<script>
+    function logout() {
+            let confirmLogout = confirm("Exit now?"); //confirm() has 2 options : ok (True) and cancel(False)
+            
+            if (confirmLogout) { //if ok or True
+                window.location.href = "index.html"; //load page
+            }
+        } 
+
+        function message(){
+            alert("Not available at this time.");
+        }
+</script>
 </body>
 </html>
